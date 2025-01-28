@@ -10,7 +10,7 @@ body {
 
 .root { 
 	font-size: x-large; 
-	color: whitesmoke; 
+	color: rgb(65, 64, 64); 
 	background-color: rgb(57, 151, 57); 
 	box-shadow: 0 2px 5px grey; 
 	padding: 0% 5% 1% 5%; 
