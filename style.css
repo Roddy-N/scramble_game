@@ -12,7 +12,7 @@ body {
 	font-size: x-large; 
 	color: rgb(65, 64, 64); 
 	background-color: rgb(57, 151, 57); 
-	box-shadow: 0 2px 5px grey; 
+	box-shadow: 0 2px 5px rgb(97, 96, 96); 
 	padding: 0% 5% 1% 5%; 
 
 	text-align: center; 
@@ -35,6 +35,7 @@ input {
 	margin-bottom: 0%; 
 	display: flex; 
 	width: 100%; 
+	border-radius: 12px;
 } 
 
 .foot>button { 
