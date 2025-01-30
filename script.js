@@ -1,22 +1,37 @@
-// script.js 
+// // script.js 
 
-const words = [ 
-	"react", 
-	"angular", 
-	"javascript", 
-	"bootstrap", 
-	"tailwind", 
-]; 
+// const words = [ 
+// 	"react", 
+// 	"angular", 
+// 	"javascript", 
+// 	"bootstrap", 
+// 	"tailwind", 
+// ]; 
 
-// Respective list of hints 
-const hints = [ 
-	"JavaScript framework", 
-	"JavaScript Framework", 
-	"Scripting Language", 
-	"Styling Library", 
-	"Styling Library", 
-]; 
-
+// // Respective list of hints 
+// const hints = [ 
+// 	"JavaScript framework", 
+// 	"JavaScript Framework", 
+// 	"Scripting Language", 
+// 	"Styling Library", 
+// 	"Styling Library", 
+// ]; 
+// Function to fetch and read CSV from a file path
+function fetchCSV(filePath) {
+    fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load CSV file");
+            }
+            return response.text();
+        })
+        .then(data => {
+            parseCSV(data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+}
 // Initialize display word 
 let displayWord = ""; 
 
