@@ -32,6 +32,27 @@ function fetchCSV(filePath) {
             console.error("Error:", error);
         });
 }
+
+// Function to parse CSV data and store in lists
+function parseCSV(data) {
+    const lines = data.trim().split("\n"); // Split into lines
+    const words = [];
+    const hints = [];
+
+    lines.forEach((line, index) => {
+        if (index === 0) return; // Skip header row
+        const [word, hint] = line.split(",");
+        if (word && hint) {
+            words.push(word.trim());
+            hints.push(hint.trim());
+        }
+    });
+
+    console.log("Countries:", words);
+    console.log("Fact:", hints);
+}
+
+
 // Initialize display word 
 let displayWord = ""; 
 
